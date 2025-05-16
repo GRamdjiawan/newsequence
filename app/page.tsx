@@ -61,7 +61,7 @@ export default function Home() {
       <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div style={{ opacity, scale, y }} className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/imgs/IMG_0069.jpg"
             alt="Real estate property showcase"
             fill
             priority
@@ -233,7 +233,7 @@ export default function Home() {
               className="relative h-[500px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src="/imgs/IMG_0105.jpg"
                 alt="Real estate photography equipment"
                 fill
                 className="object-cover"

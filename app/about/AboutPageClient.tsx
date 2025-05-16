@@ -55,7 +55,7 @@ export default function AboutPageClient() {
               className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src="/imgs/IMG_0105.jpg"
                 alt="New Sequence team at work"
                 fill
                 className="object-cover"
@@ -128,7 +128,7 @@ export default function AboutPageClient() {
               className="order-2 lg:order-1 relative h-[400px] md:h-[500px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src="/imgs/IMG_0129.jpg"
                 alt="Our approach to real estate photography"
                 fill
                 className="object-cover"
@@ -187,7 +187,7 @@ export default function AboutPageClient() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -224,7 +224,7 @@ export default function AboutPageClient() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-primary text-white">
