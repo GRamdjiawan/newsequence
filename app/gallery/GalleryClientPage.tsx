@@ -5,77 +5,30 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import galleryData from "@/context/gallery.json"
 
-// Sample gallery items - in a real application, this would come from a database or CMS
-const galleryItems = [
-  {
-    id: 1,
-    title: "Modern Apartment Living Room",
-    category: "photography",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Downtown Loft",
-  },
-  {
-    id: 2,
-    title: "Luxury Kitchen Design",
-    category: "photography",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Suburban Estate",
-  },
-  {
-    id: 3,
-    title: "Beachfront Property Aerial",
-    category: "photography",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Coastal Villa",
-  },
-  {
-    id: 4,
-    title: "Penthouse Walkthrough",
-    category: "video",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "City Center Tower",
-    videoUrl: "#", // This would be a real video URL in production
-  },
-  {
-    id: 5,
-    title: "Suburban Home Tour",
-    category: "video",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Family Residence",
-    videoUrl: "#", // This would be a real video URL in production
-  },
-  {
-    id: 6,
-    title: "Pre-Construction Condo",
-    category: "3d",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Riverside Development",
-  },
-  {
-    id: 7,
-    title: "Virtual Staging - Empty Living Room",
-    category: "3d",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Urban Apartment",
-  },
-  {
-    id: 8,
-    title: "Master Bedroom Suite",
-    category: "photography",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Luxury Home",
-  },
-  {
-    id: 9,
-    title: "Architectural Exterior",
-    category: "photography",
-    image: "/placeholder.svg?height=600&width=800",
-    location: "Modern Villa",
-  },
-]
+type GalleryItemType = {
+  id: number
+  title: string
+  category: "photography" | "video" | "3d"
+  image: string
+  location: string
+  videoUrl?: string
+}
 
-function GalleryItem({ item, index, onClick }) {
+const galleryItems: GalleryItemType[] = galleryData as GalleryItemType[]
+
+
+
+function GalleryItem({
+  item,
+  index,
+  onClick,
+}: {
+  item: GalleryItemType
+  index: number
+  onClick: () => void
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -110,11 +63,14 @@ function GalleryItem({ item, index, onClick }) {
 
 export default function GalleryClientPage() {
   const [activeTab, setActiveTab] = useState("all")
-  const [selectedItem, setSelectedItem] = useState(null)
+  const [selectedItem, setSelectedItem] = useState<GalleryItemType | null>(null)
 
-  const filteredItems = activeTab === "all" ? galleryItems : galleryItems.filter((item) => item.category === activeTab)
+  const filteredItems =
+    activeTab === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeTab)
 
-  const openLightbox = (item) => {
+  const openLightbox = (item: GalleryItemType) => {
     setSelectedItem(item)
   }
 
@@ -127,7 +83,11 @@ export default function GalleryClientPage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-3xl md:text-5xl font-bold mb-6">Our Gallery</h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Browse our portfolio of stunning real estate photography, videos, and 3D renders
@@ -149,31 +109,7 @@ export default function GalleryClientPage() {
               </TabsList>
             </div>
 
-            <TabsContent value="all" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item, index) => (
-                  <GalleryItem key={item.id} item={item} index={index} onClick={() => openLightbox(item)} />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="photography" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item, index) => (
-                  <GalleryItem key={item.id} item={item} index={index} onClick={() => openLightbox(item)} />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="video" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredItems.map((item, index) => (
-                  <GalleryItem key={item.id} item={item} index={index} onClick={() => openLightbox(item)} />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="3d" className="mt-8">
+            <TabsContent value={activeTab} className="mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredItems.map((item, index) => (
                   <GalleryItem key={item.id} item={item} index={index} onClick={() => openLightbox(item)} />
@@ -186,7 +122,10 @@ export default function GalleryClientPage() {
 
       {/* Lightbox */}
       {selectedItem && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={closeLightbox}>
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
           <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
             <Button
               variant="ghost"
@@ -202,7 +141,6 @@ export default function GalleryClientPage() {
                 {selectedItem.category === "video" ? (
                   <div className="w-full h-full flex items-center justify-center bg-black">
                     <p className="text-white">Video player would be here</p>
-                    {/* In a real app, this would be a video player component */}
                   </div>
                 ) : (
                   <Image
@@ -215,7 +153,9 @@ export default function GalleryClientPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-2">{selectedItem.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-2">Location: {selectedItem.location}</p>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  Location: {selectedItem.location}
+                </p>
                 <p className="text-gray-600 dark:text-gray-400 capitalize">
                   Category: {selectedItem.category === "3d" ? "3D Rendering" : selectedItem.category}
                 </p>

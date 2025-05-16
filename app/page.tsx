@@ -41,17 +41,17 @@ export default function Home() {
     {
       title: "Luxury Beachfront Villa",
       category: "Photography & Video",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/imgs/IMG_0069.jpg",
     },
     {
       title: "Modern Downtown Penthouse",
       category: "3D Rendering",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/imgs/IMG_0072.jpg",
     },
     {
       title: "Suburban Family Home",
       category: "Photography",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/imgs/IMG_0132.jpg",
     },
   ]
 
