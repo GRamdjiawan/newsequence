@@ -70,8 +70,8 @@ export const ContactEmailTemplate: React.FC<ContactEmailProps> = ({
           </Section>
 
           <Text style={styles.text}>
-            If you need immediate assistance, please don't hesitate to call us
-            at (123) 456-7890.
+            If you need immediate assistance, please don't hesitate to call 
+            at +31 6 19826246.
           </Text>
 
           <Section style={styles.buttonContainer}>

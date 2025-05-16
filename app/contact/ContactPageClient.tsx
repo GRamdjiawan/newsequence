@@ -54,29 +54,35 @@ export default function ContactPageClient() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
-
+    console.log("Form submitted with values:", values);
+    
     try {
-      // In a real application, this would be an API call
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   body: JSON.stringify(values),
-      // });
-
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok) {
+        throw new Error(result.error || "Something went wrong");
+      }
+  
       toast({
         title: "Message Sent",
         description: "We'll get back to you as soon as possible.",
       });
-
+  
       form.reset();
       setShowCalendly(true);
-    } catch (error) {
+    } catch (error: any) {
       toast({
         title: "Error",
         description:
-          "There was a problem sending your message. Please try again.",
+          error.message || "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -287,10 +293,10 @@ export default function ContactPageClient() {
                     <div>
                       <h3 className="font-medium mb-1">Phone</h3>
                       <a
-                        href="tel:+1234567890"
+                        href="tel:+31619826246"
                         className="text-gray-600 dark:text-gray-400 hover:text-primary"
                       >
-                        (123) 456-7890
+                        +31 6 19826246 
                       </a>
                     </div>
                   </div>
@@ -300,9 +306,9 @@ export default function ContactPageClient() {
                     <div>
                       <h3 className="font-medium mb-1">Location</h3>
                       <p className="text-gray-600 dark:text-gray-400">
-                        123 Photography Lane
+                       Achter Raamstraat 46
                         <br />
-                        New York, NY 10001
+                        2512BW, The Hague
                       </p>
                     </div>
                   </div>

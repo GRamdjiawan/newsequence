@@ -17,15 +17,15 @@ export default function Footer() {
               their best.
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Link href="https://www.instagram.com/newsequence_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <Instagram className="h-5 w-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" />
               </Link>
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              {/* <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <Facebook className="h-5 w-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" />
-              </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              </Link> */}
+              {/* <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer() {
                   href="tel:+1234567890"
                   className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
-                  (123) 456-7890
+                  +31 6 19826246
                 </a>
               </li>
             </ul>

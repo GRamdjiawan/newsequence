@@ -60,11 +60,11 @@ export const BaseEmailTemplate: React.FC<BaseEmailTemplateProps> = ({
                   New Sequence | Professional Real Estate Media
                 </Text>
                 <Text style={styles.footerText}>
-                  123 Photography Lane, New York, NY 10001
+                  Achter Raamstraat 46, 2512BW, The Hague
                 </Text>
                 <Text style={styles.footerText}>
-                  <Link href="tel:+1234567890" style={styles.link}>
-                    (123) 456-7890
+                  <Link href="tel:+31619826246" style={styles.link}>
+                  +31 6 19826246
                   </Link>{" "}
                   |
                   <Link href="mailto:info@newsequence.com" style={styles.link}>
@@ -78,15 +78,15 @@ export const BaseEmailTemplate: React.FC<BaseEmailTemplateProps> = ({
             {/* Social Links */}
             <Row>
               <Column style={styles.socialLinks}>
-                <Link href="https://instagram.com" style={styles.socialLink}>
+                <Link href="https://www.instagram.com/newsequence_/" style={styles.socialLink}>
                   Instagram
                 </Link>
-                <Link href="https://facebook.com" style={styles.socialLink}>
+                {/* <Link href="https://facebook.com" style={styles.socialLink}>
                   Facebook
                 </Link>
                 <Link href="https://linkedin.com" style={styles.socialLink}>
                   LinkedIn
-                </Link>
+                </Link> */}
               </Column>
             </Row>
 
