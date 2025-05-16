@@ -5,7 +5,7 @@ import React from "react"
 
 // Initialize Resend with API key
 // In production, this would use the actual API key from environment variables
-const resend = new Resend("re_2zM8barj_zM4SY8AJVejTtJ1g2k1jo5x7")
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   try {
