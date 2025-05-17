@@ -1,170 +1,181 @@
 [
     {
-        "id": 1,
-        "title": "",
-        "category": "photography",
-        "image": "/imgs/IMG_0069.jpg",
-        "location": "Downtown Loft"
-    },
-    {
-        "id": 2,
-        "title": "Luxury Kitchen Design",
-        "category": "photography",
-        "image": "/imgs/IMG_0072.jpg",
-        "location": "Suburban Estate"
-    },
-    {
-        "id": 3,
-        "title": "Beachfront Property Aerial",
-        "category": "photography",
-        "image": "/imgs/IMG_0074.jpg",
-        "location": "Coastal Villa"
-    },
-    {
-        "id": 4,
-        "title": "Penthouse Walkthrough",
-        "category": "photography",
-        "image": "/imgs/IMG_0075.jpg",
-        "location": "City Center Tower"
-    },
-    {
-        "id": 5,
-        "title": "Suburban Home Tour",
-        "category": "photography",
-        "image": "/imgs/IMG_0076.jpg",
-        "location": "Family Residence"
-    },
-    {
-        "id": 6,
-        "title": "Pre-Construction Condo",
-        "category": "photography",
-        "image": "/imgs/IMG_0078.jpg",
-        "location": "Riverside Development"
-    },
-    {
-        "id": 7,
-        "title": "Virtual Staging - Empty Living Room",
-        "category": "photography",
-        "image": "/imgs/IMG_0093.jpg",
-        "location": "Urban Apartment"
-    },
-    {
-        "id": 8,
-        "title": "Master Bedroom Suite",
-        "category": "photography",
-        "image": "/imgs/IMG_0100.jpg",
-        "location": "Luxury Home"
-    },
-    {
-        "id": 9,
-        "title": "Architectural Exterior",
-        "category": "photography",
-        "image": "/imgs/IMG_0101.jpg",
-        "location": "Modern Villa"
-    },
-    {
-        "id": 10,
-        "title": "Contemporary Living Room",
-        "category": "photography",
-        "image": "/imgs/IMG_0102.jpg",
-        "location": "Urban Loft"
-    },
-    {
-        "id": 11,
-        "title": "Luxury Bathroom Design",
-        "category": "photography",
-        "image": "/imgs/IMG_0103.jpg",
-        "location": "High-End Apartment"
-    },
-    {
-        "id": 12,
-        "title": "Outdoor Pool Area",
-        "category": "photography",
-        "image": "/imgs/IMG_0104.jpg",
-        "location": "Resort Villa"
-    },
-    {
-        "id": 13,
-        "title": "Modern Kitchen Setup",
-        "category": "photography",
-        "image": "/imgs/IMG_0105.jpg",
-        "location": "Contemporary Home"
-    },
-    {
-        "id": 14,
-        "title": "Luxury Living Room",
-        "category": "photography",
-        "image": "/imgs/IMG_0106.jpg",
-        "location": "Penthouse Suite"
-    },
-    {
-        "id": 15,
-        "title": "Cozy Bedroom Design",
-        "category": "photography",
-        "image": "/imgs/IMG_0113.jpg",
-        "location": "Charming Cottage"
-    },
-    {
-        "id": 16,
-        "title": "Stylish Dining Area",
-        "category": "photography",
-        "image": "/imgs/IMG_0108.jpg",
-        "location": "Modern Apartment"
-    },
-    {
-        "id": 17,
-        "title": "Elegant Bathroom",
-        "category": "photography",
-        "image": "/imgs/IMG_0109.jpg",
-        "location": "Luxury Residence"
-    },
-    {
-        "id": 18,
-        "title": "Spacious Living Room",
-        "category": "photography",
-        "image": "/imgs/IMG_0120.jpg",
-        "location": "Family Home"
-    },
-    {
-        "id": 19,
-        "title": "Stylish Office Space",
-        "category": "photography",
-        "image": "/imgs/IMG_0123.jpg",
-        "location": "Corporate Office"
-    },
-    {
-        "id": 20,
-        "title": "",
-        "category": "",
-        "image": "/imgs/IMG_0132.jpg",
-        "location": ""
-    },
-    {
-        "id": 21,
-        "title": "",
-        "category": "",
-        "image": "/imgs/IMG_0126.jpg",
-        "location": ""
-    },
-    {
-        "id": 22,
-        "title": "",
-        "category": "",
-        "image": "/imgs/IMG_0127.jpg",
-        "location": ""
-    },
-    {
-        "id": 23,
-        "title": "",
-        "category": "",
-        "image": "/imgs/IMG_0129.jpg",
-        "location": ""
-    },
-    {
-        "id": 24,
-        "title": "",
-        "category": "",
-        "image": "/imgs/IMG_0131.jpg",
-        "location": ""
+        "id": "real-estate-showcase",
+        "title": "Real Estate Photography Showcase",
+        "description": "A diverse showcase of premium real estate photography projects, capturing interiors, exteriors, and aerial perspectives across various property types.",
+        "coverImage": "/imgs/IMG_0069.jpg",
+        "category": "Photography",
+        "location": "Various Locations",
+        "images": [
+          {
+            "id": 1,
+            "title": "",
+            "src": "/imgs/IMG_0069.jpg",
+            "type": "photography",
+            "location": "Downtown Loft"
+          },
+          {
+            "id": 2,
+            "title": "Luxury Kitchen Design",
+            "src": "/imgs/IMG_0072.jpg",
+            "type": "photography",
+            "location": "Suburban Estate"
+          },
+          {
+            "id": 3,
+            "title": "Beachfront Property Aerial",
+            "src": "/imgs/IMG_0074.jpg",
+            "type": "photography",
+            "location": "Coastal Villa"
+          },
+          {
+            "id": 4,
+            "title": "Penthouse Walkthrough",
+            "src": "/imgs/IMG_0075.jpg",
+            "type": "photography",
+            "location": "City Center Tower"
+          },
+          {
+            "id": 5,
+            "title": "Suburban Home Tour",
+            "src": "/imgs/IMG_0076.jpg",
+            "type": "photography",
+            "location": "Family Residence"
+          },
+          {
+            "id": 6,
+            "title": "Pre-Construction Condo",
+            "src": "/imgs/IMG_0078.jpg",
+            "type": "photography",
+            "location": "Riverside Development"
+          },
+          {
+            "id": 7,
+            "title": "Virtual Staging - Empty Living Room",
+            "src": "/imgs/IMG_0093.jpg",
+            "type": "photography",
+            "location": "Urban Apartment"
+          },
+          {
+            "id": 8,
+            "title": "Master Bedroom Suite",
+            "src": "/imgs/IMG_0100.jpg",
+            "type": "photography",
+            "location": "Luxury Home"
+          },
+          {
+            "id": 9,
+            "title": "Architectural Exterior",
+            "src": "/imgs/IMG_0101.jpg",
+            "type": "photography",
+            "location": "Modern Villa"
+          },
+          {
+            "id": 10,
+            "title": "Contemporary Living Room",
+            "src": "/imgs/IMG_0102.jpg",
+            "type": "photography",
+            "location": "Urban Loft"
+          },
+          {
+            "id": 11,
+            "title": "Luxury Bathroom Design",
+            "src": "/imgs/IMG_0103.jpg",
+            "type": "photography",
+            "location": "High-End Apartment"
+          },
+          {
+            "id": 12,
+            "title": "Outdoor Pool Area",
+            "src": "/imgs/IMG_0104.jpg",
+            "type": "photography",
+            "location": "Resort Villa"
+          },
+          {
+            "id": 13,
+            "title": "Modern Kitchen Setup",
+            "src": "/imgs/IMG_0105.jpg",
+            "type": "photography",
+            "location": "Contemporary Home"
+          },
+          {
+            "id": 14,
+            "title": "Luxury Living Room",
+            "src": "/imgs/IMG_0106.jpg",
+            "type": "photography",
+            "location": "Penthouse Suite"
+          },
+          {
+            "id": 15,
+            "title": "Cozy Bedroom Design",
+            "src": "/imgs/IMG_0113.jpg",
+            "type": "photography",
+            "location": "Charming Cottage"
+          },
+          {
+            "id": 16,
+            "title": "Stylish Dining Area",
+            "src": "/imgs/IMG_0108.jpg",
+            "type": "photography",
+            "location": "Modern Apartment"
+          },
+          {
+            "id": 17,
+            "title": "Elegant Bathroom",
+            "src": "/imgs/IMG_0109.jpg",
+            "type": "photography",
+            "location": "Luxury Residence"
+          },
+          {
+            "id": 18,
+            "title": "Spacious Living Room",
+            "src": "/imgs/IMG_0120.jpg",
+            "type": "photography",
+            "location": "Family Home"
+          },
+          {
+            "id": 19,
+            "title": "Stylish Office Space",
+            "src": "/imgs/IMG_0123.jpg",
+            "type": "photography",
+            "location": "Corporate Office"
+          },
+          {
+            "id": 20,
+            "title": "",
+            "src": "/imgs/IMG_0132.jpg",
+            "type": "photography",
+            "location": ""
+          },
+          {
+            "id": 21,
+            "title": "",
+            "src": "/imgs/IMG_0126.jpg",
+            "type": "photography",
+            "location": ""
+          },
+          {
+            "id": 22,
+            "title": "",
+            "src": "/imgs/IMG_0127.jpg",
+            "type": "photography",
+            "location": ""
+          },
+          {
+            "id": 23,
+            "title": "",
+            "src": "/imgs/IMG_0129.jpg",
+            "type": "photography",
+            "location": ""
+          },
+          {
+            "id": 24,
+            "title": "",
+            "src": "/imgs/IMG_0131.jpg",
+            "type": "photography",
+            "location": ""
+          }
+        ]
     }
 ]
+      
